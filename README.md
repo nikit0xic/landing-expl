@@ -8,7 +8,10 @@
 
 
 ```bash
-docker build -t my_image_name .
+cd ~/landing-expl/resources
+chmod 777  config.dockerfile
+chmod 777  index.html
+docker build -t my_image_name -f config.dockerfile.
 ```
 
 ```bash
