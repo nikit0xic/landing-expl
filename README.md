@@ -6,3 +6,11 @@
 - оригинал (trener-tennis.ru)
 - тильда лендинг (https://tennis-trener.tilda.ws/)
 
+
+```bash
+docker build -t my_image_name .
+```
+
+```bash
+docker run -d --name my_container_name my_image_name
+```
