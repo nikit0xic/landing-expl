@@ -1,10 +1,11 @@
-# Используйте официальный образ Nginx в качестве базового образа
 FROM nginx:latest
 
 # Создайте директорию, если она не существует
-RUN mkdir -p /usr/share/nginx/html/resources
+RUN mkdir -p /usr/share/nginx/html/
+RUN mkdir -p /usr/share/nginx/html/index_files
 
-# Копируем HTML файл из текущей директории в директорию по умолчанию Nginx
-COPY index.html /usr/share/nginx/html/resources/.
+COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+
+COPY index_files /usr/share/nginx/html/index_files
 
 EXPOSE 5149
