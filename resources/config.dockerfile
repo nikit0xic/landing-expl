@@ -6,7 +6,8 @@ RUN mkdir -p /usr/share/nginx/html/
 RUN mkdir -p /usr/share/nginx/html/index_files
 
 COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+RUN rm /etc/nginx/conf.d/default.conf
 
 COPY index_files /usr/share/nginx/html/index_files
 
-EXPOSE 5149
+EXPOSE 80
