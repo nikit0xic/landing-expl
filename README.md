@@ -15,5 +15,5 @@ docker build -t my_img -f config.dockerfile .
 ```
 
 ```bash
-    docker run -p 5149:80 -d my_img
+    docker run -p 5149:70 -d my_img
 ```
