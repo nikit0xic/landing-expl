@@ -9,11 +9,9 @@
 
 ```bash
 cd ~/landing-expl/resources
-chmod 777  config.dockerfile
-chmod 777  index.html
 docker build -t my_img -f config.dockerfile .
 ```
 
 ```bash
-    docker run -p 5149:70 -d my_img
+    docker run -d my_img
 ```
