@@ -9,9 +9,9 @@
 
 ```bash
 cd ~/landing-expl/resources
-docker build -t my_img -f config.dockerfile .
+sudo docker build -t landing_build_i .
 ```
 
 ```bash
-    docker run -d my_img
+    sudo docker run -p 8081:80 -d landing_build_i
 ```
