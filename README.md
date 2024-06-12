@@ -8,10 +8,13 @@
 
 
 ```bash
-cd ~/landing-expl/resources
-sudo docker build -t landing_build_i .
+cd ~/landing-expl/src
+chmod 777  config.dockerfile
+chmod 777  index.html
+chmod 777  nginx.conf
+docker build -t my_img -f config.dockerfile .
 ```
 
 ```bash
-    sudo docker run -p 8081:80 -d landing_build_i
+docker run -p 5149:80 -d --name my_container_name my_img
 ```
